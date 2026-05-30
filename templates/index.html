@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Traffic Monitoring</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚗 Vehicle Traffic Monitoring System</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-box">
+        <input type="file" id="videoInput">
+        <button onclick="uploadVideo()">Upload Video</button>
+    </div>
+
+    <!-- Video Display -->
+    <div class="video-container">
+        <img id="videoFeed" alt="Video will appear here">
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <h2>📊 Live Statistics</h2>
+        <p>Total Vehicles: <span id="total">0</span></p>
+        <p>Cars: <span id="cars">0</span></p>
+        <p>Buses: <span id="buses">0</span></p>
+        <p>Trucks: <span id="trucks">0</span></p>
+        <p>Bikes: <span id="bikes">0</span></p>
+
+        <br>
+        <button onclick="downloadCSV()">Download CSV</button>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
