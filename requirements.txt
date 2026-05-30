@@ -1,8 +1,0 @@
-flask
-opencv-python
-ultralytics
-numpy
-pillow
-filterpy
-scikit-image
-lapx
